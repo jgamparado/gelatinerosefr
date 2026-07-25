@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Offre de Courtoisie — Accélérateur Métabolique 7X</title>
+<style>
+:root{
+  --bg:#0a0a0a;
+  --bg-card:#151515;
+  --bg-card-2:#1c1c1c;
+  --border:#2a2a2a;
+  --gold:#f59e0b;
+  --gold-dark:#b45309;
+  --green:#16a34a;
+  --green-dark:#15803d;
+  --red:#dc2626;
+  --text:#f5f5f5;
+  --text-dim:#a3a3a3;
+  --text-faint:#6b6b6b;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  padding-top:52px;
+}
+img{max-width:100%;display:block}
+.container{max-width:640px;margin:0 auto;padding:16px}
+
+/* 1. Barra fixa de aviso (dourada, texto escuro) */
+.top-bar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:var(--gold);
+  color:#1a1200;
+  text-align:center;
+  font-size:13px;
+  font-weight:700;
+  padding:10px 12px;
+  line-height:1.4;
+}
+@media screen and (max-width:480px){.top-bar{font-size:12px}}
+
+/* 2. Card principal */
+.badge{
+  display:inline-block;
+  background:var(--gold);
+  color:#1a1200;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  padding:6px 14px;
+  border-radius:999px;
+  margin-bottom:14px;
+}
+.headline{
+  font-size:24px;
+  line-height:1.35;
+  font-weight:800;
+  margin:0 0 14px;
+  color:#fff;
+}
+.headline .highlight{color:var(--gold)}
+@media screen and (max-width:480px){.headline{font-size:21px}}
+.lead-text{
+  font-size:16px;
+  line-height:1.6;
+  color:var(--text-dim);
+  margin:0 0 14px;
+}
+
+/* 3. Depoimento com borda dourada */
+.testimonial-card{
+  background:var(--bg-card);
+  border-left:4px solid var(--gold);
+  border-radius:10px;
+  padding:18px;
+  margin:22px 0 26px;
+}
+.testimonial-head{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+.avatar-circle{
+  width:48px;height:48px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--gold),#7c4a03);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;
+  flex-shrink:0;
+}
+.testimonial-name{font-weight:700;font-size:15px;color:#fff}
+.testimonial-card blockquote{
+  margin:0;
+  font-style:italic;
+  font-size:15px;
+  line-height:1.65;
+  color:var(--text-dim);
+}
+
+/* 4. Bloco de urgência */
+.urgency-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:26px;
+}
+.urgency-card{
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px 10px;
+  text-align:center;
+}
+.urgency-label{
+  font-size:11px;
+  color:var(--text-faint);
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  margin-bottom:6px;
+  font-weight:600;
+}
+.timer-display{
+  font-size:30px;
+  font-weight:800;
+  color:var(--gold);
+  font-variant-numeric:tabular-nums;
+}
+.spots-display{
+  font-size:30px;
+  font-weight:800;
+  color:#fff;
+}
+
+/* Seções */
+.section-title{
+  font-size:19px;
+  font-weight:800;
+  color:#fff;
+  margin:0 0 4px;
+}
+.section-subtitle{
+  font-size:14.5px;
+  color:var(--text-dim);
+  margin:0 0 14px;
+}
+.section-block{margin-bottom:30px}
+
+.x-list,.check-list{display:flex;flex-direction:column;gap:10px}
+.x-item,.check-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:14px;
+}
+.x-item .icon{color:var(--red);font-size:18px;font-weight:800;flex-shrink:0;line-height:1.4}
+.check-item .icon{color:var(--green);font-size:18px;font-weight:800;flex-shrink:0;line-height:1.4}
+.x-item p,.check-item p{margin:0;font-size:14.5px;line-height:1.55;color:var(--text)}
+.check-item strong{display:block;color:#fff;font-size:15px;margin-bottom:3px}
+
+/* Comparez */
+.compare-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  margin-bottom:16px;
+}
+@media screen and (min-width:520px){.compare-grid{grid-template-columns:1fr 1fr}}
+.compare-card{
+  border-radius:12px;
+  padding:16px;
+  font-size:14px;
+  line-height:1.55;
+}
+.compare-card.good{background:rgba(22,163,74,.1);border:1px solid var(--green)}
+.compare-card.bad{background:rgba(163,163,163,.06);border:1px solid var(--border)}
+.compare-card .compare-title{font-weight:700;color:#fff;margin-bottom:6px;display:block}
+.compare-card.good p{color:#d7f5e2}
+.compare-card.bad p{color:var(--text-dim)}
+.compare-final{
+  font-size:15px;
+  line-height:1.65;
+  color:var(--text-dim);
+  margin:0;
+}
+.compare-final strong{color:var(--gold)}
+
+/* Card final de oferta */
+.offer-card{
+  background:var(--bg-card-2);
+  border:2px solid var(--gold);
+  border-radius:16px;
+  padding:22px 18px;
+  margin-bottom:16px;
+  box-shadow:0 0 40px rgba(245,158,11,.15);
+}
+.offer-label{
+  text-align:center;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--text-faint);
+  margin:0 0 4px;
+}
+.price-old{
+  text-align:center;
+  font-size:18px;
+  color:var(--text-faint);
+  text-decoration:line-through;
+  margin-bottom:12px;
+}
+.offer-badge-wrap{text-align:center;margin-bottom:12px}
+.offer-badge{
+  display:inline-block;
+  background:var(--green);
+  color:#fff;
+  font-size:13px;
+  font-weight:800;
+  padding:7px 16px;
+  border-radius:999px;
+}
+.price-new{
+  text-align:center;
+  font-size:48px;
+  font-weight:900;
+  color:#fff;
+  line-height:1;
+  margin-bottom:10px;
+}
+.small-note{
+  text-align:center;
+  font-size:12.5px;
+  color:var(--text-faint);
+  margin:0 0 18px;
+}
+.product-recap{
+  text-align:center;
+  margin-bottom:18px;
+  padding-top:14px;
+  border-top:1px solid var(--border);
+}
+.product-recap .name{font-size:14px;color:var(--text-dim);font-weight:600}
+.product-recap .val{font-size:16px;color:#fff;font-weight:800;margin-top:2px}
+
+.cta-button{
+  display:block;
+  width:100%;
+  background:var(--green);
+  color:#fff;
+  text-align:center;
+  font-size:16.5px;
+  font-weight:800;
+  padding:18px 16px;
+  border-radius:12px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(22,163,74,.35);
+  transition:transform .15s ease,box-shadow .15s ease;
+}
+.cta-button:active{transform:scale(.98)}
+@media (hover:hover){
+  .cta-button:hover{background:var(--green-dark);box-shadow:0 6px 24px rgba(22,163,74,.5)}
+}
+.skip-button{
+  display:block;
+  width:100%;
+  text-align:center;
+  background:none;
+  border:none;
+  color:var(--text-faint);
+  font-size:13.5px;
+  padding:14px 10px 6px;
+  text-decoration:underline;
+  cursor:pointer;
+}
+.terms-text{
+  text-align:center;
+  font-size:11.5px;
+  color:var(--text-faint);
+  line-height:1.5;
+  margin-top:6px;
+}
+.terms-text a{color:var(--text-faint);text-decoration:underline}
+
+/* Garantia */
+.guarantee-card{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:var(--bg-card);
+  border:1px solid var(--green);
+  border-radius:12px;
+  padding:16px;
+  margin:18px 0 12px;
+}
+.guarantee-card .icon{font-size:24px;flex-shrink:0}
+.guarantee-card p{margin:0;font-size:14px;line-height:1.55;color:var(--text-dim)}
+.guarantee-card strong{color:#fff}
+
+.security-note{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  font-size:12.5px;
+  color:var(--text-faint);
+  margin-bottom:22px;
+}
+
+/* Aviso final */
+.final-warning{
+  text-align:center;
+  font-size:13.5px;
+  color:var(--text-dim);
+  background:var(--bg-card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:16px;
+  margin:10px 0 20px;
+  line-height:1.6;
+}
+.final-warning strong{color:var(--gold)}
+
+.footer{
+  text-align:center;
+  font-size:12px;
+  color:var(--text-faint);
+  padding:20px 16px 40px;
+}
+</style>
+</head>
+<body>
+
+<div class="top-bar">⚠️ NE FERMEZ PAS CETTE PAGE — LA FERMER PEUT ENTRAÎNER UN DOUBLE DÉBIT SUR VOTRE CARTE</div>
+
+<div class="container">
+
+  <!-- 2. Card principal -->
+  <span class="badge">Offre de Courtoisie — Rien que pour vous</span>
+  <h1 class="headline">Je comprends que 27€ puisse sembler beaucoup... <span class="highlight">Et si je vous laissais y accéder pour seulement 19€ ?</span></h1>
+  <p class="lead-text">Écoutez. Je comprends que vous avez décidé de ne pas activer l'Accélérateur complet. Mais avant de partir, je dois être honnête avec vous.</p>
+  <p class="lead-text">Le protocole de base ouvre la voie. Mais sans aucune activation, votre corps mettra des semaines de plus à répondre. Et ces semaines peuvent vous coûter cher.</p>
+
+  <!-- 3. Depoimento -->
+  <div class="testimonial-card">
+    <div class="testimonial-head">
+      <div class="avatar-circle">👩</div>
+      <div class="testimonial-name">Camille R., 39 ans — Lyon</div>
+    </div>
+    <blockquote>"Le Protocole de base est très bon, mais avec l'Accélérateur j'ai obtenu des résultats dès le lendemain. C'est sans aucun doute ce qui a fait la différence, je n'ai jamais senti mon corps brûler autant."</blockquote>
+  </div>
+
+  <!-- 4. Bloco de urgência -->
+  <div class="urgency-grid">
+    <div class="urgency-card">
+      <div class="urgency-label">Offre expirée dans</div>
+      <div class="timer-display" id="countdown-timer">00:00</div>
+    </div>
+    <div class="urgency-card">
+      <div class="urgency-label">Places à ce prix</div>
+      <div class="spots-display">2</div>
+    </div>
+  </div>
+
+  <!-- 5. Sans l'activation -->
+  <div class="section-block">
+    <h2 class="section-title">❌ Sans l'activation</h2>
+    <p class="section-subtitle">Si vous décidez de continuer uniquement avec le protocole de base :</p>
+    <div class="x-list">
+      <div class="x-item"><span class="icon">✕</span><p>Votre corps essaiera de répondre... mais sans le soutien métabolique, le signal sera faible</p></div>
+      <div class="x-item"><span class="icon">✕</span><p>Vous continuerez à vivre des semaines de doute juste quand vous avez besoin de résultats</p></div>
+      <div class="x-item"><span class="icon">✕</span><p>La frustration du « presque fonctionner » peut vous faire abandonner avant de voir des résultats</p></div>
+      <div class="x-item"><span class="icon">✕</span><p>Vous perdrez des semaines ou des mois que vous ne pourrez pas récupérer</p></div>
+    </div>
+  </div>
+
+  <!-- 6. Pour seulement 19€ -->
+  <div class="section-block">
+    <h2 class="section-title">✅ Pour seulement 19€</h2>
+    <p class="section-subtitle"><strong style="color:#fff">La version concentrée du système avancé.</strong><br>Un coup de boost dès le jour 1.</p>
+    <div class="check-list">
+      <div class="check-item"><span class="icon">✓</span><p><strong>Protocole d'Activation Métabolique</strong>Prépare votre corps pour une combustion rapide dès le jour 1</p></div>
+      <div class="check-item"><span class="icon">✓</span><p><strong>Routine Matinale de 7 Minutes</strong>Reprogramme votre métabolisme pendant que le reste du monde dort</p></div>
+      <div class="check-item"><span class="icon">✓</span><p><strong>Module de Stabilité Physique</strong>Maintenez la combustion exactement quand ça compte le plus, sans plateau</p></div>
+      <div class="check-item"><span class="icon">✓</span><p><strong>Blueprint Anti-Sabotage</strong>Élimine les 5 erreurs silencieuses qui bloquent la perte de poids</p></div>
+    </div>
+  </div>
+
+  <!-- 7. Comparez -->
+  <div class="section-block">
+    <h2 class="section-title">⚡ Comparez</h2>
+    <p class="section-subtitle">19€ maintenant vs. ne rien faire</p>
+    <div class="compare-grid">
+      <div class="compare-card good">
+        <span class="compare-title">⚡ Avec l'activation</span>
+        <p>Résultats dès la première semaine. Combustion constante. Confiance réelle.</p>
+      </div>
+      <div class="compare-card bad">
+        <span class="compare-title">⏳ Sans l'activation</span>
+        <p>Résultats lents. Doutes constants. Frustration accumulée.</p>
+      </div>
+    </div>
+    <p class="compare-final"><strong>19€</strong>, c'est moins qu'un <strong>dîner au restaurant</strong>. Mais la différence entre activer aujourd'hui ou non... peut être la différence entre des résultats en jours ou des résultats en mois.</p>
+  </div>
+
+  <!-- 8. Card final de oferta -->
+  <div class="offer-card">
+    <p class="offer-label">Prix original</p>
+    <p class="price-old">27€</p>
+    <div class="offer-badge-wrap">
+      <span class="offer-badge">🔥 Réduction spéciale — Maintenant seulement</span>
+    </div>
+    <div class="price-new">19€</div>
+    <p class="small-note">Paiement unique · Accès immédiat · Garantie 90 jours</p>
+
+    <div class="product-recap">
+      <div class="name">Accélérateur Métabolique 7X</div>
+      <div class="val">19,00 €</div>
+    </div>
+
+    <!-- TROCAR: link de checkout do downsell -->
+    <a href="#checkout-downsell" class="cta-button">🔥 OUI, JE VEUX DES RÉSULTATS RAPIDES ET INTENSES</a>
+
+    <!-- TROCAR: link de continuação do funil -->
+    <a href="#continue-funnel" class="skip-button">Non merci, je préfère des résultats plus lents</a>
+
+    <!-- TROCAR: link da página de Conditions d'Utilisation -->
+    <p class="terms-text">En cliquant sur l'un des boutons ci-dessus, vous acceptez les <a href="#">Conditions d'Utilisation</a>.</p>
+  </div>
+
+  <div class="guarantee-card">
+    <span class="icon">🛡️</span>
+    <p><strong>Garantie de 90 jours :</strong> Si vous ne constatez pas la différence, nous vous remboursons chaque centime. Sans questions.</p>
+  </div>
+
+  <div class="security-note">🔒 Transaction 100% sécurisée. Vos données sont protégées.</div>
+
+  <!-- 9. Aviso final -->
+  <div class="final-warning">
+    ⚠️ C'est votre dernière opportunité. Quand vous fermerez cette page, le prix de <strong>19€</strong> disparaîtra pour toujours. Il n'y aura pas de seconde chance.
+  </div>
+
+</div>
+
+<!-- 10. Footer -->
+<div class="footer">© 2026 — Offre exclusive de courtoisie.</div>
+
+<script>
+(function(){
+  // Timer já expirado: fixado em 00:00 (não conta, reforça "última chance perdida")
+  var el = document.getElementById('countdown-timer');
+  el.textContent = '00:00';
+})();
+</script>
+
+</body>
+</html>
