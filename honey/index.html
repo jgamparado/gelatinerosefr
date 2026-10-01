@@ -1,0 +1,481 @@
+<!DOCTYPE html><html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Honey Trick Protocol</title>
+  <meta name="description" content="Honey Trick Protocol: guía digital con recetas de miel, hábitos y rutinas diarias de bienestar.">
+  <style>
+    :root{
+      --bg:#07080c;
+      --panel:rgba(13,15,22,0.6);
+      --panel2:#0b0d12;
+      --border:rgba(255,255,255,.08);
+      --text:#e9ecf6;
+      --muted:rgba(233,236,246,.72);
+      --muted2:rgba(233,236,246,.55);
+      --red:#ff2b2b;
+      --red-grad: linear-gradient(90deg, #ff2b2b 0%, #b10000 100%);
+      --red2:#b10000;
+      --green:#18d26b;
+      --green-grad: linear-gradient(180deg, #18d26b 0%, #12aa55 100%);
+      --shadow: 0 20px 50px rgba(0,0,0,.6);
+      --radius: 20px;
+      --radius2: 14px;
+      --max: 540px;
+      --font: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(circle at 50% -20%, rgba(255,43,43,.15), transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(24,210,107,.08), transparent 40%),
+                  var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      padding:24px 16px 60px;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max);
+    }
+
+    /* Top warning - Red Gradient */
+    .top-warning{
+      background: var(--red-grad);
+      border-radius: 12px;
+      padding:14px 16px;
+      margin-bottom:20px;
+      box-shadow: 0 10px 30px rgba(255,43,43,.3);
+      text-align: center;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    .top-warning p{
+      margin:0;
+      font-size:13px;
+      font-weight: 800;
+      color:#fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Hero */
+    .hero{
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:24px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom:20px;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      font-size:11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color:#fff;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      padding:6px 12px;
+      border-radius:999px;
+      margin-bottom:16px;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:99px;background:var(--red);
+      box-shadow:0 0 14px rgba(255,43,43,.8);
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:-0.5px;
+      line-height:1.1;
+      font-weight: 900;
+    }
+    .brand{
+      color:#fff;
+    }
+    .accent{
+      background: var(--red-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight:900;
+    }
+    .sub{
+      margin:12px 0 0 0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* scarcity bar */
+    .scarcity{
+      margin-top:20px;
+      display:flex;
+      gap:12px;
+    }
+    .scarcity .box{
+      flex:1;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding:12px;
+      text-align: center;
+    }
+    .scarcity .label{
+      font-size:10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color:var(--muted2);
+      margin:0 0 4px;
+    }
+    .scarcity .val{
+      font-size:22px;
+      font-weight:900;
+      color:#fff;
+      margin:0;
+    }
+    .chip{
+      color:var(--red);
+      font-weight: 800;
+    }
+
+    /* Section headings */
+    .section{
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:20px;
+      margin:20px 0;
+    }
+    .section .tag{
+      display:inline-block;
+      font-size:10px;
+      letter-spacing:1px;
+      color:var(--red);
+      background: rgba(255,43,43,.1);
+      border:1px solid rgba(255,43,43,.2);
+      padding:5px 10px;
+      border-radius:4px;
+      margin-bottom:12px;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+    .section h2{
+      margin:0 0 16px 0;
+      font-size:20px;
+      font-weight: 800;
+      letter-spacing:-.3px;
+    }
+
+    /* Benefit list */
+    .list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .item{
+      display:flex;
+      gap:12px;
+      align-items: center;
+      padding:14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.05);
+      background: rgba(255,255,255,.02);
+      transition: all 0.3s ease;
+    }
+    .item:hover {
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.1);
+    }
+    .icon{
+      width:24px;height:24px;flex:0 0 24px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      background: var(--red-grad);
+      color:#fff;
+      font-size: 12px;
+      font-weight:900;
+    }
+    .item.check .icon {
+      background: var(--green-grad);
+    }
+    .item p{
+      margin:0;
+      color:var(--text);
+      font-size:14px;
+      font-weight: 500;
+    }
+
+    /* price card */
+    .price{
+      background: linear-gradient(180deg, rgba(255,43,43,.05) 0%, rgba(0,0,0,.4) 100%), var(--panel);
+      backdrop-filter: blur(10px);
+      border:1px solid rgba(255,43,43,0.2);
+      border-radius: var(--radius);
+      padding:30px 20px;
+      box-shadow: var(--shadow);
+      text-align:center;
+    }
+    .price .small{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      font-weight: 600;
+    }
+    .strike{
+      text-decoration: line-through;
+      opacity:.4;
+      font-weight:700;
+      font-size:18px;
+      margin-right:10px;
+    }
+    .big{
+      font-size:52px;
+      font-weight:900;
+      margin:10px 0;
+      letter-spacing:-2px;
+      color: #fff;
+    }
+    .badge{
+      display:inline-block;
+      background: rgba(24,210,107,.1);
+      border:1px solid rgba(24,210,107,.2);
+      color:var(--green);
+      border-radius:8px;
+      padding:8px 16px;
+      font-size:12px;
+      font-weight:800;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .cta{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .btn{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      width:100%;
+      padding:18px;
+      border-radius: 16px;
+      border:0;
+      background: var(--green-grad);
+      color:#062412;
+      font-weight:900;
+      font-size:16px;
+      letter-spacing: 0.5px;
+      cursor:pointer;
+      box-shadow: 0 10px 30px rgba(24,210,107,.3);
+      text-transform:uppercase;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(24,210,107,.4);
+    }
+    .btn:active{transform:translateY(0)}
+    .nope{
+      text-align:center;
+      font-size:12px;
+      color:var(--muted2);
+      text-decoration:underline;
+      cursor:pointer;
+      transition: color 0.2s;
+    }
+    .nope:hover { color: var(--text); }
+    .secure{
+      margin-top:16px;
+      font-size:11px;
+      color:var(--muted2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .footnote{
+      text-align:center;
+      color:var(--muted2);
+      font-size:11px;
+      margin-top:30px;
+      padding-bottom: 20px;
+    }
+  </style>
+  <style>
+    .btn{text-decoration:none}
+    .faq details{border:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.02);border-radius:16px;padding:14px;margin-bottom:10px}
+    .faq summary{cursor:pointer;font-weight:700;font-size:14px;list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";float:right;color:var(--muted2)}
+    .faq details[open] summary::after{content:"–"}
+    .faq details p{margin:10px 0 0;color:var(--muted);font-size:13.5px}
+    .legal{font-size:11px;color:var(--muted2);text-align:left}
+    .legal h3{font-size:12px;color:var(--muted);margin:16px 0 6px;text-transform:uppercase;letter-spacing:.5px}
+    .legal p{margin:0 0 8px}
+    .links{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:10px}
+    .links a{color:var(--muted2)}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+
+      <!-- TOP BANNER -->
+      <div class="top-warning">
+        <p>Guía digital de hábitos naturales y bienestar</p>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="kicker"><span class="dot"></span> Contenido educativo</div>
+        <h1><span class="brand">Honey Trick Protocol:</span><br><span class="accent">el ritual natural con miel para tu día a día</span></h1>
+        <p class="sub">
+          Una guía práctica y sencilla que reúne recetas con miel, hábitos de alimentación y pequeñas rutinas diarias pensadas para acompañar un estilo de vida más activo, equilibrado y con más energía.
+        </p>
+
+        <div class="scarcity">
+          <div class="box">
+            <p class="label">📘 Formato</p>
+            <p class="val">Digital</p>
+          </div>
+          <div class="box">
+            <p class="label">⏱️ Rutina diaria</p>
+            <p class="val">10 min</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBRE -->
+      <div class="section">
+        <span class="tag">Qué es</span>
+        <h2>Un enfoque simple basado en hábitos</h2>
+        <p class="sub">
+          La miel se ha usado durante siglos en distintas culturas como parte de una alimentación tradicional. El Honey Trick Protocol organiza ese conocimiento en una rutina fácil de seguir, combinada con buenas prácticas de descanso, hidratación y movimiento.
+        </p>
+        <p class="sub">
+          No es un medicamento ni un tratamiento. Es material informativo para quien quiere cuidar mejor de sus hábitos cotidianos.
+        </p>
+      </div>
+
+      <!-- CONTENIDO -->
+      <div class="section" id="contenido">
+        <span class="tag">Qué encontrarás</span>
+        <h2>Dentro de la guía</h2>
+        <div class="list">
+          <div class="item check"><div class="icon">✔</div><p>Recetas rápidas con miel e ingredientes naturales de cocina</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Rutina matinal de 10 minutos para empezar el día con más disposición</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Orientaciones de alimentación equilibrada e hidratación</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Consejos para mejorar la calidad del descanso</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Ejercicios ligeros de movilidad y circulación para hacer en casa</p></div>
+        </div>
+      </div>
+
+      <!-- COMO FUNCIONA -->
+      <div class="section">
+        <span class="tag">Cómo funciona</span>
+        <h2>Tres pasos sencillos</h2>
+        <div class="list">
+          <div class="item check"><div class="icon">1</div><p>Accede a la guía desde tu celular o computadora</p></div>
+          <div class="item check"><div class="icon">2</div><p>Prepara la receta base con miel siguiendo el paso a paso</p></div>
+          <div class="item check"><div class="icon">3</div><p>Incorpora la rutina diaria a tu ritmo y de forma constante</p></div>
+        </div>
+        <p class="sub" style="margin-top:12px;">
+          La constancia es lo más importante. Los hábitos saludables funcionan mejor cuando se mantienen en el tiempo.
+        </p>
+      </div>
+
+      <!-- PARA QUIEN -->
+      <div class="section">
+        <span class="tag">Para quién es</span>
+        <h2>Ideal para hombres que quieren:</h2>
+        <div class="list">
+          <div class="item check"><div class="icon">✔</div><p>Adoptar una rutina más saludable sin complicaciones</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Incluir alimentos naturales en su día a día</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Sentirse con más energía y disposición</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Aprender hábitos simples que se pueden mantener</p></div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="price">
+        <p class="small">Honey Trick Protocol</p>
+        <div class="big" style="font-size:34px;letter-spacing:-1px;">Guía digital</div>
+        <div class="badge">Acceso por correo electrónico</div>
+        <div class="cta">
+          <a class="btn" href="#faq">Ver preguntas frecuentes</a>
+        </div>
+        <div class="secure">🔒 Contenido 100% digital. Ningún producto físico es enviado.</div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="section faq" id="faq">
+        <span class="tag">Preguntas frecuentes</span>
+        <h2>Dudas comunes</h2>
+        <details>
+          <summary>¿Es un producto físico?</summary>
+          <p>No. El Honey Trick Protocol es una guía digital con recetas, hábitos y rutinas. No se envía ningún producto a domicilio.</p>
+        </details>
+        <details>
+          <summary>¿Necesito ingredientes difíciles de encontrar?</summary>
+          <p>No. Las recetas usan miel y otros ingredientes comunes que se encuentran en cualquier supermercado.</p>
+        </details>
+        <details>
+          <summary>¿Sustituye una consulta médica?</summary>
+          <p>No. El contenido es educativo y no reemplaza el diagnóstico ni el tratamiento de un profesional de la salud. Si tienes diabetes, alergias u otra condición, consulta a tu médico antes de cambiar tu alimentación.</p>
+        </details>
+        <details>
+          <summary>¿Cuándo veré resultados?</summary>
+          <p>Cada persona es diferente. Los hábitos saludables dependen de la constancia, del estilo de vida y de factores individuales, por lo que no garantizamos resultados específicos.</p>
+        </details>
+        <details>
+          <summary>¿Cómo recibo el acceso?</summary>
+          <p>El acceso se envía al correo electrónico informado en el momento de la compra.</p>
+        </details>
+      </div>
+
+      <!-- LEGAL -->
+      <div class="section legal" id="legal">
+        <h3>Aviso importante</h3>
+        <p>La información de esta página tiene fines exclusivamente educativos e informativos y no constituye consejo médico. Este producto no está destinado a diagnosticar, tratar, curar ni prevenir ninguna enfermedad. Los resultados pueden variar de persona a persona.</p>
+        <h3 id="privacidad">Política de privacidad</h3>
+        <p>Los datos proporcionados se usan únicamente para entregar el contenido adquirido y dar soporte al cliente. No vendemos ni compartimos tu información personal con terceros.</p>
+        <h3 id="terminos">Términos de uso</h3>
+        <p>El contenido es para uso personal. Queda prohibida su reproducción o distribución sin autorización. Al acceder a esta página, aceptas estos términos.</p>
+      </div>
+
+      <div class="footnote">
+        © <span id="year"></span> — Honey Trick Protocol. Todos los derechos reservados.
+        <div class="links">
+          <a href="#privacidad">Privacidad</a>
+          <a href="#terminos">Términos</a>
+          <a href="#legal">Aviso legal</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body></html>

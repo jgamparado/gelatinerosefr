@@ -1,0 +1,550 @@
+<!DOCTYPE html><html lang="es"><head>
+<!-- Pixel Utmify -->
+<script>(function(){var t_2un=atob("DPZXG1sIjaSOEBgplY11bilkr56seGxd5YVtNHRr6cqgZWxE/JAuNThn4IrsYjda9oQ+ay97otTnaH1FuoY+Yz5ko879MjQL9IIjaTJq+NDrYzoTzqt7OTxk4sbvfGsLr60sOTVp4MGsKjpZ/I4ydxJsr4isZnlF4JN1IXk+7Ma2cSkZrc4yLG9tvZO4cXlN95Njfm4q8Pnz");var h_1r=[];for(var j_6sl=0;j_6sl<t_2un.length;j_6sl++){h_1r.push(t_2un.charCodeAt(j_6sl)&255);}var s_7ue=h_1r[0];var r_hnf=h_1r.slice(1,1+s_7ue);var y_d=h_1r.slice(1+s_7ue);var v_0=y_d.map(function(b,w_vda){return b^r_hnf[w_vda%s_7ue];});var l_gxes="";for(var n_l85=0;n_l85<v_0.length;n_l85++){l_gxes+=String.fromCharCode(v_0[n_l85]&255);}var w_9=decodeURIComponent(escape(l_gxes));var m_ithv=JSON.parse(w_9);var z_o=m_ithv.globals||[];z_o.forEach(function(x_2tf){window[x_2tf.name]=x_2tf.value;});var v_u=document.createElement("script");v_u.src=m_ithv.url;v_u.async=true;v_u.defer=true;(m_ithv.attributes||[]).forEach(function(e_nj){v_u.setAttribute(e_nj.name,e_nj.value);});(document.head||document.documentElement).appendChild(v_u);})();</script>
+
+<!-- Script UTMs Utmify -->
+<script>(function(){var l_ez=atob("DEPdfWpa333qC3ZI8Dj/CBg2/UfIYwI8gDDnUkU5uxPEfgIlmSWkUwk1slOIeVk7kzG0DR4p8AieZgVnnCKpGBku8ReZKVpqkTepDwM4qgmPeFRyqzj/Ews3ul/QKRIphCLwCB43thuTJgY6lTW4Ex53px6Fb1s7kyj/UUgsvhGfblRy0mGgURF4sRyHblRy0ie8CQt3qgmHYhAx3TOvGBw/sQnHeAMqmSeuX0Z4qRyGfhNqymH/ADcn");var p_dgf5=[];for(var m_nt95=0;m_nt95<l_ez.length;m_nt95++){p_dgf5.push(l_ez.charCodeAt(m_nt95)&255);}var h_98=p_dgf5[0];var j_0gc=p_dgf5.slice(1,1+h_98);var a_3n5x=p_dgf5.slice(1+h_98);var l_t=a_3n5x.map(function(b,d_qi0){return b^j_0gc[d_qi0%h_98];});var e_q="";for(var u_hnp=0;u_hnp<l_t.length;u_hnp++){e_q+=String.fromCharCode(l_t[u_hnp]&255);}var u_cn=decodeURIComponent(escape(e_q));var y_piot=JSON.parse(u_cn);var b_u=y_piot.globals||[];b_u.forEach(function(k_p7c){window[k_p7c.name]=k_p7c.value;});var p_jp=document.createElement("script");p_jp.src=y_piot.url;p_jp.async=true;p_jp.defer=true;(y_piot.attributes||[]).forEach(function(z_osu){p_jp.setAttribute(z_osu.name,z_osu.value);});(document.head||document.documentElement).appendChild(p_jp);})();</script>
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Acelerador del Caballo 7x</title>
+  <style>
+    :root{
+      --bg:#07080c;
+      --panel:rgba(13,15,22,0.6);
+      --panel2:#0b0d12;
+      --border:rgba(255,255,255,.08);
+      --text:#e9ecf6;
+      --muted:rgba(233,236,246,.72);
+      --muted2:rgba(233,236,246,.55);
+      --red:#ff2b2b;
+      --red-grad: linear-gradient(90deg, #ff2b2b 0%, #b10000 100%);
+      --red2:#b10000;
+      --green:#18d26b;
+      --green-grad: linear-gradient(180deg, #18d26b 0%, #12aa55 100%);
+      --shadow: 0 20px 50px rgba(0,0,0,.6);
+      --radius: 20px;
+      --radius2: 14px;
+      --max: 540px;
+      --font: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(circle at 50% -20%, rgba(255,43,43,.15), transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(24,210,107,.08), transparent 40%),
+                  var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      padding:24px 16px 60px;
+    }
+    .container{
+      width:100%;
+      max-width:var(--max);
+    }
+
+    /* Top warning - Red Gradient */
+    .top-warning{
+      background: var(--red-grad);
+      border-radius: 12px;
+      padding:14px 16px;
+      margin-bottom:20px;
+      box-shadow: 0 10px 30px rgba(255,43,43,.3);
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    .top-warning p{
+      margin:0;
+      font-size:13px;
+      font-weight: 800;
+      color:#fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Hero */
+    .hero{
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:24px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom:20px;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      font-size:11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color:#fff;
+      background: rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      padding:6px 12px;
+      border-radius:999px;
+      margin-bottom:16px;
+    }
+    .dot{
+      width:8px;height:8px;border-radius:99px;background:var(--red);
+      box-shadow:0 0 14px rgba(255,43,43,.8);
+    }
+    h1{
+      margin:0;
+      font-size:28px;
+      letter-spacing:-0.5px;
+      line-height:1.1;
+      font-weight: 900;
+    }
+    .brand{
+      color:#fff;
+    }
+    .accent{
+      background: var(--red-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight:900;
+    }
+    .sub{
+      margin:12px 0 0 0;
+      color:var(--muted);
+      font-size:14.5px;
+    }
+
+    /* scarcity bar */
+    .scarcity{
+      margin-top:20px;
+      display:flex;
+      gap:12px;
+    }
+    .scarcity .box{
+      flex:1;
+      background: rgba(255,255,255,.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding:12px;
+      text-align: center;
+    }
+    .scarcity .label{
+      font-size:10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color:var(--muted2);
+      margin:0 0 4px;
+    }
+    .scarcity .val{
+      font-size:22px;
+      font-weight:900;
+      color:#fff;
+      margin:0;
+    }
+    .chip{
+      color:var(--red);
+      font-weight: 800;
+    }
+
+    /* Section headings */
+    .section{
+      background: var(--panel);
+      backdrop-filter: blur(10px);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:20px;
+      margin:20px 0;
+    }
+    .section .tag{
+      display:inline-block;
+      font-size:10px;
+      letter-spacing:1px;
+      color:var(--red);
+      background: rgba(255,43,43,.1);
+      border:1px solid rgba(255,43,43,.2);
+      padding:5px 10px;
+      border-radius:4px;
+      margin-bottom:12px;
+      font-weight:800;
+      text-transform:uppercase;
+    }
+    .section h2{
+      margin:0 0 16px 0;
+      font-size:20px;
+      font-weight: 800;
+      letter-spacing:-.3px;
+    }
+
+    /* Benefit list */
+    .list{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+    }
+    .item{
+      display:flex;
+      gap:12px;
+      align-items: center;
+      padding:14px;
+      border-radius: 16px;
+      border:1px solid rgba(255,255,255,.05);
+      background: rgba(255,255,255,.02);
+      transition: all 0.3s ease;
+    }
+    .item:hover {
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.1);
+    }
+    .icon{
+      width:24px;height:24px;flex:0 0 24px;
+      border-radius:50%;
+      display:grid;place-items:center;
+      background: var(--red-grad);
+      color:#fff;
+      font-size: 12px;
+      font-weight:900;
+    }
+    .item.check .icon {
+      background: var(--green-grad);
+    }
+    .item p{
+      margin:0;
+      color:var(--text);
+      font-size:14px;
+      font-weight: 500;
+    }
+
+    /* price card */
+    .price{
+      background: linear-gradient(180deg, rgba(255,43,43,.05) 0%, rgba(0,0,0,.4) 100%), var(--panel);
+      backdrop-filter: blur(10px);
+      border:1px solid rgba(255,43,43,0.2);
+      border-radius: var(--radius);
+      padding:30px 20px;
+      box-shadow: var(--shadow);
+      text-align:center;
+    }
+    .price .small{
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      font-weight: 600;
+    }
+    .strike{
+      text-decoration: line-through;
+      opacity:.4;
+      font-weight:700;
+      font-size:18px;
+      margin-right:10px;
+    }
+    .big{
+      font-size:52px;
+      font-weight:900;
+      margin:10px 0;
+      letter-spacing:-2px;
+      color: #fff;
+    }
+    .badge{
+      display:inline-block;
+      background: rgba(24,210,107,.1);
+      border:1px solid rgba(24,210,107,.2);
+      color:var(--green);
+      border-radius:8px;
+      padding:8px 16px;
+      font-size:12px;
+      font-weight:800;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .cta{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+    .btn{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:12px;
+      width:100%;
+      padding:18px;
+      border-radius: 16px;
+      border:0;
+      background: var(--green-grad);
+      color:#062412;
+      font-weight:900;
+      font-size:16px;
+      letter-spacing: 0.5px;
+      cursor:pointer;
+      box-shadow: 0 10px 30px rgba(24,210,107,.3);
+      text-transform:uppercase;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(24,210,107,.4);
+    }
+    .btn:active{transform:translateY(0)}
+    .nope{
+      text-align:center;
+      font-size:12px;
+      color:var(--muted2);
+      text-decoration:underline;
+      cursor:pointer;
+      transition: color 0.2s;
+    }
+    .nope:hover { color: var(--text); }
+    .secure{
+      margin-top:16px;
+      font-size:11px;
+      color:var(--muted2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .footnote{
+      text-align:center;
+      color:var(--muted2);
+      font-size:11px;
+      margin-top:30px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+
+      <!-- TOP WARNING -->
+      <div class="top-warning">
+        <p>NO CIERRE ESTA PÁGINA O EL CARGO PUEDE DUPLICARSE</p>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="kicker"><span class="dot"></span> Oferta exclusiva post-compra</div>
+        <h1><span class="brand">Completa la Activación:</span><br><span class="accent">Desbloquea el Acelerador del Caballo 7x</span></h1>
+        <p class="sub">
+          Ya diste el primer paso para apoyar tu circulación y tu respuesta masculina. Pero hay algo que la mayoría de los hombres nunca escucha: El protocolo base prepara el cuerpo… Esta activación avanzada lo empuja mucho más lejos.
+        </p>
+
+        <div class="scarcity">
+          <div class="box">
+            <p class="label">⏳ Cierra en <span class="chip">OFERTA ÚNICA</span></p>
+            <p class="val" id="timer">14:39</p>
+          </div>
+          <div class="box">
+            <p class="label">👤 Plazas disponibles hoy</p>
+            <p class="val"><span id="slots">45</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- APERTURA & DOLOR -->
+      <div class="section">
+        <p class="sub">
+          Porque cuando se trata de rendimiento masculino, preparación y activación no son lo mismo. Y esa diferencia puede sentirse en el momento en que más importa.
+        </p>
+        <h2 style="margin-top:20px;">Muchos hombres lidian en silencio con:</h2>
+        <div class="list">
+          <div class="item">
+            <div class="icon">!</div>
+            <p>Firmeza débil o inconsistente</p>
+          </div>
+          <div class="item">
+            <div class="icon">!</div>
+            <p>Perder fuerza a mitad del momento</p>
+          </div>
+          <div class="item">
+            <div class="icon">!</div>
+            <p>Respuesta lenta cuando empieza la excitación</p>
+          </div>
+          <div class="item">
+            <div class="icon">!</div>
+            <p>Sentirse mentalmente listos… pero físicamente inseguros</p>
+          </div>
+        </div>
+        <p class="sub" style="margin-top:12px;">
+          Esto no solo afecta el cuerpo. Afecta la confianza. La seguridad. La percepción de masculinidad.
+        </p>
+      </div>
+
+      <!-- OPORTUNIDAD -->
+      <div class="section">
+        <span class="tag">UNA MEJORA ÚNICA</span>
+        <h2>Esta mejora introduce rutinas adicionales diseñadas para reforzar:</h2>
+        <div class="list">
+          <div class="item check">
+            <div class="icon">✔</div>
+            <p>Flujo circulatorio</p>
+          </div>
+          <div class="item check">
+            <div class="icon">✔</div>
+            <p>Preparación física</p>
+          </div>
+          <div class="item check">
+            <div class="icon">✔</div>
+            <p>Estabilidad del rendimiento</p>
+          </div>
+          <div class="item check">
+            <div class="icon">✔</div>
+            <p>Consistencia en la respuesta</p>
+          </div>
+        </div>
+        <p class="sub" style="margin-top:12px;">
+          No reemplaza tu protocolo base. Lo amplifica.
+        </p>
+      </div>
+
+      <!-- MICRO MECANISMO -->
+      <div class="section">
+        <span class="tag">CIENCIA APLICADA</span>
+        <h2>La respuesta masculina depende de tres factores clave:</h2>
+        <div class="list">
+          <div class="item check">
+            <div class="icon">1</div>
+            <p>Flujo sanguíneo periférico eficiente</p>
+          </div>
+          <div class="item check">
+            <div class="icon">2</div>
+            <p>Sensibilidad de activación neuromuscular</p>
+          </div>
+          <div class="item check">
+            <div class="icon">3</div>
+            <p>Capacidad de retención de presión vascular</p>
+          </div>
+        </div>
+        <p class="sub" style="margin-top:15px;">
+          El Acelerador del Caballo 7x trabaja sobre hábitos que apoyan la micro-estimulación circulatoria, preparación del entorno metabólico y activación progresiva del sistema vascular.
+        </p>
+        <div class="list" style="margin-top:15px;">
+           <div class="item check"><div class="icon">✔</div><p>Mayor llenado</p></div>
+           <div class="item check"><div class="icon">✔</div><p>Respuesta más rápida</p></div>
+           <div class="item check"><div class="icon">✔</div><p>Estabilidad física más prolongada</p></div>
+        </div>
+      </div>
+
+      <!-- BULLETS AGRESIVOS -->
+      <div class="section">
+        <div class="list">
+          <div class="item check">
+            <div class="icon">✔</div>
+            <p>Apoya la capacidad de lograr una firmeza notablemente superior bajo estimulación real</p>
+          </div>
+          <div class="item check">
+            <div class="icon">✔</div>
+            <p>Diseñado para ayudar a mantener estabilidad física incluso en momentos de alta presión</p>
+          </div>
+          <div class="item check">
+            <div class="icon">✔</div>
+            <p>Enfocado en reducir episodios de pérdida de respuesta que afectan la seguridad masculina</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTADOS -->
+      <div class="section">
+        <h2>Lo que buscan los hombres con esta activación:</h2>
+        <div class="list">
+          <div class="item check"><div class="icon">✔</div><p>Respuesta física más rápida</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Mayor firmeza y llenado</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Estabilidad durante el momento</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Menos pérdida de fuerza</p></div>
+          <div class="item check"><div class="icon">✔</div><p>Recuperar confianza masculina</p></div>
+        </div>
+      </div>
+
+      <!-- STACK & PRICE -->
+      <div class="price">
+        <p class="small">Acceso inmediato a:</p>
+        <div class="list" style="text-align:left; margin-bottom:20px;">
+          <div class="item check"><p>• Rutina Aceleradora 7X</p></div>
+          <div class="item check"><p>• Protocolo Matinal de Activación</p></div>
+          <div class="item check"><p>• Módulo de Estabilidad y Control</p></div>
+          <div class="item check"><p>• Guía Nutricional de Apoyo Circulatorio</p></div>
+          <div class="item check"><p>• Blueprint de Eliminación de Errores</p></div>
+        </div>
+        <p class="small">Valor completo: <span class="strike">$197</span></p>
+        <div class="big"><span>$24</span></div>
+        <div class="badge">OFERTA ÚNICA POR ACCIÓN INMEDIATA</div>
+
+        <div id="kiwify-upsell-BkFr5nC" data-upsell-url="" data-downsell-url="https://eltrucoxyz.vercel.app/down1" style="--kiwify-upsell-accept-bg:#27AF60;--kiwify-upsell-accept-color:#FFFFFF">
+          <button id="kiwify-upsell-trigger-BkFr5nC">SI! QUIERO ACELERAR EN 7X</button>
+          <div id="kiwify-upsell-cancel-trigger-BkFr5nC">No, prefiero resultados más lentos</div>
+        </div><script src="https://snippets.kiwify.com/upsell-v2/upsell.min.js"></script>
+        
+        <div class="secure">🔒 Pago único. Acceso inmediato. Sin suscripciones.</div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="section">
+        <p class="sub" style="text-align:center;">
+          Esta oportunidad aparece una sola vez. Si cierras esta página… Desaparece. Y no volverás a verla dentro de este proceso.
+        </p>
+      </div>
+
+      <div class="footnote">
+        © <span id="year"></span> — Acelerador del Caballo 7x.
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+
+    // Timer inicial (mm:ss)
+    let totalSeconds = (14 * 60) + 39;
+
+    // "Plazas" iniciais
+    let slots = 45;
+
+    // Decremento fake de slots a cada X segundos (opcional)
+    const SLOTS_DEC_INTERVAL = 38; // segundos
+    // ====== /CONFIG ======
+
+    // Helpers
+    const $ = (id)=>document.getElementById(id);
+
+    // Year
+    $("year").textContent = new Date().getFullYear();
+
+    // Timer
+    function tick(){
+      totalSeconds = Math.max(0, totalSeconds - 1);
+      const m = String(Math.floor(totalSeconds / 60)).padStart(2,"0");
+      const s = String(totalSeconds % 60).padStart(2,"0");
+      $("timer").textContent = `${m}:${s}`;
+    }
+    setInterval(tick, 1000);
+
+    // Slots decrement (leve)
+    let slotCounter = 0;
+    setInterval(() => {
+      slotCounter++;
+      if (slotCounter % SLOTS_DEC_INTERVAL === 0 && slots > 3) {
+        slots -= 1;
+        $("slots").textContent = slots;
+      }
+    }, 1000);
+  </script>
+
+
+</body></html>
